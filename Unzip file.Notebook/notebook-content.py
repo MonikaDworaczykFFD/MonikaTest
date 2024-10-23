@@ -64,21 +64,3 @@ print("Wszystkie pliki zostały pomyślnie skopiowane do Lakehouse.")
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
-
-# CELL ********************
-
-
-zip_file_path = '/lakehouse/default/Files/forefrontdermatology_2024-10-16_enc.zip'
-
-if os.path.exists(zip_file_path):
-    print(f"Plik istnieje: {zip_file_path}")
-else:
-    print(f"Plik nie istnieje: {zip_file_path}")
-
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }

@@ -19,6 +19,7 @@
 
 import zipfile
 import os
+import shutil
 from pyspark.sql import SparkSession
 
 # Utworzenie sesji Spark
@@ -55,6 +56,24 @@ for root, dirs, files in os.walk(extract_path):
         print(f"Plik {file} został skopiowany do {lakehouse_file_path}")
 
 print("Wszystkie pliki zostały pomyślnie skopiowane do Lakehouse.")
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+
+zip_file_path = '/lakehouse/default/Files/forefrontdermatology_2024-10-16_enc.zip'
+
+if os.path.exists(zip_file_path):
+    print(f"Plik istnieje: {zip_file_path}")
+else:
+    print(f"Plik nie istnieje: {zip_file_path}")
 
 
 # METADATA ********************
